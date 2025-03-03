@@ -57,6 +57,10 @@ fire() {
 	printf "\n\nLeave building!\n"
 }
 
+log_action() {
+    echo "$(date) - Created branch: $(current_branch) - Commit message: $1" >> ~/git-fire.log
+}
+
 display_help() {
 	cat <<-EOF
 
